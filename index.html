@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gem of Vuosaari</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  body { background: var(--ink); color: var(--foam); min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+  .chooser { text-align: center; padding: 40px 24px; }
+  .chooser h1 { color: var(--foam); font-size: 2rem; }
+  .chooser-links { display: flex; gap: 14px; justify-content: center; margin-top: 24px; flex-wrap: wrap; }
+</style>
+<script>
+  // Redirect automatically based on the visitor's browser language,
+  // defaulting to English. Falls through to the visible links below
+  // for crawlers, no-JS visitors, or if redirect is blocked.
+  (function () {
+    var lang = (navigator.language || "en").toLowerCase();
+    var dest = "en/";
+    if (lang.indexOf("fi") === 0) dest = "fi/";
+    else if (lang.indexOf("sv") === 0) dest = "sv/";
+    window.location.replace(dest);
+  })();
+</script>
+</head>
+<body>
+  <div class="chooser">
+    <p class="eyebrow">Gem of Vuosaari</p>
+    <h1>Choose your language / Valitse kieli / Välj språk</h1>
+    <div class="chooser-links">
+      <a class="btn btn-outline" style="border-color:var(--brass);color:var(--foam);" href="en/">English</a>
+      <a class="btn btn-outline" style="border-color:var(--brass);color:var(--foam);" href="fi/">Suomi</a>
+      <a class="btn btn-outline" style="border-color:var(--brass);color:var(--foam);" href="sv/">Svenska</a>
+    </div>
+  </div>
+</body>
+</html>
