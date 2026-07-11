@@ -200,6 +200,14 @@ p { margin: 0 0 1em; }
 .highlight-card {
   background: var(--paper); padding: 26px 22px;
 }
+.highlight-card--promo {
+  grid-column: 1 / -1;
+  display: flex; align-items: center; gap: 18px;
+}
+.highlight-card--promo .icon { margin-bottom: 0; flex-shrink: 0; }
+@media (max-width: 620px) {
+  .highlight-card--promo { flex-direction: column; align-items: flex-start; gap: 10px; }
+}
 .highlight-card .icon { color: var(--brass); margin-bottom: 14px; }
 .highlight-card h3 { margin-bottom: 6px; }
 .highlight-card p { margin: 0; font-size: 0.93rem; color: var(--granite); }
